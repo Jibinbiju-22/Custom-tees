@@ -1,0 +1,245 @@
+<link href="/assets/guest/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link href="/assets/guest/css/tiny-slider.css" rel="stylesheet">
+<link href="/assets/guest/css/style.css" rel="stylesheet">
+<!-- Start Why Choose Us Section -->
+<div class="why-choose-section">
+	<div class="container">
+		<div class="row justify-content-between">
+			<div class="col-lg-6">
+				<form [formGroup]='reqconfirmformgroup'>
+					<!-- <div *ngFor="let row of productdata">
+						<h1>{{row.productname}}
+						</h1>
+
+					</div> -->
+
+
+					<h2 class="section-title"></h2>
+					<p></p>
+
+					<div class="row my-5">
+
+						<!-- <div class="col-6 col-md-6">
+							<div class="feature">
+								<div class="form-group">
+									<label>Select the color</label><br>
+									<select class="form-control" formControlName='colorid'>
+										<option value="">--Select--</option>
+										<option *ngFor="let row of colordetails" [value]="row.colorid">
+											{{row.color}}
+										</option>
+									</select>
+								</div> -->
+								<!-- <div class="icon">
+										<img src="/assets/guest/images/truck.svg" alt="Image" class="imf-fluid">
+									</div> -->
+								<!-- <h3></h3>
+								<p></p>
+							</div>
+						</div> -->
+
+						<div class="col-6 col-md-6">
+							<div class="feature">
+								<div class="field">
+									<label class="label_field">Product</label><br>
+									<input type="file" formControlName="admindesign" (change)="selectFile($event)"
+										placeholder="Product" />
+										<div *ngIf="reqconfirmformgroup.controls['admindesign'].invalid && (reqconfirmformgroup.controls['admindesign'].dirty || reqconfirmformgroup.controls['admindesign'].touched) || validationstatus ">
+											<div *ngIf="reqconfirmformgroup.controls['admindesign'].errors['required']" style="color: red;" >Please enter customized product.
+											</div>
+											<!-- <div *ngIf="reqconfirmformgroup.controls['phone'].errors['pattern']" style="color: red;" >Please Check Format of Number
+											</div> -->
+										</div>
+								</div>
+								<!-- <div class="icon">
+										<img src="/assets/guest/images/bag.svg" alt="Image" class="imf-fluid">
+									</div> -->
+								<h3></h3>
+								<p></p>
+							</div>
+						</div>
+
+						<div class="col-6 col-md-6">
+							<div class="feature">
+								<div class="form-group">
+									<label>Description</label><br>
+									<textarea formControlName="admindescription" class="form-control"
+										placeholder="Description" rows="10"></textarea>
+										<div *ngIf="reqconfirmformgroup.controls['admindescription'].invalid && (reqconfirmformgroup.controls['admindescription'].dirty || reqconfirmformgroup.controls['admindescription'].touched) || validationstatus ">
+											<div *ngIf="reqconfirmformgroup.controls['admindescription'].errors['required']" style="color: red;" >Please enter the description.
+											</div>
+											<!-- <div *ngIf="reqconfirmformgroup.controls['phone'].errors['pattern']" style="color: red;" >Please Check Format of Number
+											</div> -->
+										</div>
+								</div>
+								<!-- <div class="icon">
+										<img src="/assets/guest/images/support.svg" alt="Image" class="imf-fluid">
+									</div> -->
+								<h3></h3>
+								<p></p>
+							</div>
+						</div>
+
+						<div class="col-6 col-md-6">
+							<div class="feature">
+								<div class="form-group">
+
+									<!-- <label>Quantity</label><br>
+									<input type="number" formControlName="totalquantity" value="1" min="1" (change)="onChange($event)" id="totalquantity">
+									
+										
+									<br><br> -->
+									<input type="hidden" formControlName="totalquantity" >
+									<label>Total quantity</label><br><input type="text" formControlName="totalquantity"  class="form-control">
+									<br>
+									<br>
+									<!-- Price may change according to product customization -->
+								</div>
+								
+								<h3></h3>
+								<p></p>
+							</div>
+						</div> 
+
+						<!-- <div class="col-6 col-md-6">
+							<div class="feature">
+								<div class="form-group">
+
+									<label>Total Quantity </label><br>
+									<input type="text" formControlName='totalquantity' class="form-control"
+										placeholder="Total Quantity ">
+										<div *ngIf="reqconfirmformgroup.controls['totalquantity'].invalid && (reqconfirmformgroup.controls['totalquantity'].dirty || reqconfirmformgroup.controls['totalquantity'].touched) || validationstatus ">
+											<div *ngIf="reqconfirmformgroup.controls['totalquantity'].errors['required']" style="color: red;" >Please Enter The Total Quantity.
+											</div>
+											<div *ngIf="reqconfirmformgroup.controls['totalquantity'].errors['pattern']" style="color: red;" >Only Numbers Allowed.
+											</div>
+										</div>
+								</div> -->
+								<!-- <div class="icon">
+										<img src="/assets/guest/images/support.svg" alt="Image" class="imf-fluid">
+									</div> -->
+								<!-- <h3></h3>
+								<p></p>
+							</div>
+						</div> -->
+
+						 <!-- <div class="col-6 col-md-6">
+							<div class="feature">
+								<div class="form-group">
+
+									<label>Quantity</label><br>
+									<input type="number" formControlName="totalquantity" value="1" min="1" (change)="onChange($event)" id="totalquantity">
+									
+										
+									<br><br>
+									<input type="hidden" formControlName="totalamount">
+									<label>Total Amount</label><br><input type="text" formControlName="totalamount" >
+									<br>
+									<br>
+									Price may change according to product customization
+								</div>
+								
+								<h3></h3>
+								<p></p>
+							</div>
+						</div>  -->
+
+
+						<!-- <div class="col-6 col-md-6">
+							<div class="feature">
+								<div class="form-group">
+									<label>Quantity </label><br>
+									<input type="text" formControlName='quantity' class="form-control"
+										placeholder="Quantity">
+
+								</div>
+							</div>
+						</div> -->
+
+						
+
+						<div class="col-6 col-md-6">
+							<div class="feature">
+								<div class="form-group">
+
+									<label>Total price </label><br>
+									<input type="text" formControlName='money' class="form-control">
+										<!-- <div *ngIf="reqconfirmformgroup.controls['money'].invalid && (reqconfirmformgroup.controls['money'].dirty || reqconfirmformgroup.controls['money'].touched) || validationstatus ">
+											<div *ngIf="reqconfirmformgroup.controls['money'].errors['required']" style="color: red;" >Please Enter Total Price.
+											</div>
+											<div *ngIf="reqconfirmformgroup.controls['money'].errors['pattern']" style="color: red;" >Only Numbers Allowed.
+											</div>
+										</div> -->
+								</div>
+								<!-- <div class="icon">
+										<img src="/assets/guest/images/support.svg" alt="Image" class="imf-fluid">
+									</div> -->
+								<h3></h3>
+								<p></p>
+							</div>
+						</div>
+
+						<div class="col-6 col-md-6">
+							<div class="feature">
+								<div class="form-group">
+
+									<!-- <label>Customization Price </label><br>
+									<input type="text" formControlName='customizationprice' class="form-control"
+										placeholder="Customization Price"> -->
+										<!-- <div *ngIf="reqconfirmformgroup.controls['customizationprice'].invalid && (reqconfirmformgroup.controls['customizationprice'].dirty || reqconfirmformgroup.controls['customizationprice'].touched) || validationstatus ">
+											<div *ngIf="reqconfirmformgroup.controls['customizationprice'].errors['required']" style="color: red;" >Please Enter Customization Price.
+											</div>
+											<div *ngIf="reqconfirmformgroup.controls['customizationprice'].errors['pattern']" style="color: red;" >Only Numbers Allowed.
+											</div>
+										</div> -->
+
+										<label>Customization price</label><br>
+										<input type="number" formControlName="customizationprice" value="0" min="0" (change)="onChange($event)" id="totalquantity"  class="form-control">
+
+								</div>
+								<!-- <div class="icon">
+										<img src="/assets/guest/images/support.svg" alt="Image" class="imf-fluid">
+									</div> -->
+								<h3></h3>
+								<p></p>
+							</div>
+						</div>
+
+
+						<div></div>
+						<div class="col-6 col-md-6" >
+							<div class="feature">
+								<div class="form-group" >
+									<!-- <a class="product-item" [routerLink]="['/customermaster/quantity']"> -->
+
+										<button type="submit" (click)="OnSubmit(reqid)" class="btn btn-danger"
+											rounded="true">
+											Upload data</button>
+									<!-- </a> -->
+								</div>
+
+								<!-- <div class="icon">
+										<img src="/assets/guest/images/return.svg" alt="Image" class="imf-fluid">
+									</div> -->
+								<h3></h3>
+								<p></p>
+							</div>
+						</div>
+
+					</div>
+				</form>
+			</div>
+
+			<!-- <div class="col-lg-5" *ngFor="let data of productdata">
+				<div class="img-wrap">
+					<br><br><br><br>
+					<img src="http://localhost:3000/images/{{data.pimage}}" style="height: 250px;" alt="Image"
+						class="img-fluid">
+				</div>
+			</div> -->
+
+		</div>
+	</div>
+</div>
+<!-- End Why Choose Us Section -->

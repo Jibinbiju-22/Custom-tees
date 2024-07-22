@@ -1,0 +1,29 @@
+<router-outlet></router-outlet>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 ">
+           <br>
+            <h3 style =" text-align: center;">COLOR REGISTER </h3><br>
+<br>
+            <form [formGroup]='colorregisterformgroup'>
+                    <div class="form-group">
+                        <label>Color </label><br>
+                        <input type="text" formControlName='color'  class="form-control" placeholder=" Color">
+                        <div *ngIf="colorregisterformgroup.controls['color'].invalid && (colorregisterformgroup.controls['color'].dirty || colorregisterformgroup.controls['color'].touched) || validationstatus ">
+                            <div *ngIf="colorregisterformgroup.controls['color'].errors['required']" style="color: red;" >Please enter the colour name
+                            </div>
+                            <div *ngIf="colorregisterformgroup.controls['color'].errors['pattern']" style="color: red;" >First letter must be capital and only characters allowed
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <br>
+                   <div>
+                    <button type="submit" (click)="OnSubmit()"   class="btn btn-danger" rounded="true">SAVE</button>
+                   </div>
+                    <br>
+                    
+            </form>
+        </div>
+    </div>
+</div>

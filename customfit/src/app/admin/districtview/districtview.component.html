@@ -1,0 +1,23 @@
+<br>
+<h3 Align="center">DISTRICT VIEW</h3><br> <div class="col-md-10">
+    <table class="table table-striped"> <thead>
+    <tr>
+    <th scope="col">SL.NO</th>
+    <th scope="col">District name</th>
+   
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of districtdetails,let i=index">
+    <td>{{ i+1 }}</td>
+    <td>{{ data.districtname}}</td>
+    <!-- <td>
+        <button type="submit" class="btn btn-primary" [routerLink]="['/Adminmaster/Editdistrict',data.districtid]">Edit</button>
+    </td> -->
+    <td><a [routerLink]="['/adminmaster/districtedit',data.districtid]">
+        <button class="btn btn-primary">Edit</button>
+    </a></td>
+    <td><button class="btn btn-success"(click)="Deletedistrict(data.districtid)" >Delete</button>
+    </td>
+    </tr></tbody>
+    </table></div>

@@ -1,0 +1,64 @@
+<router-outlet></router-outlet>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 ">
+           <br>
+            <h3 style =" text-align: center;">SIZE REGISTER</h3><br><br>
+
+            <form [formGroup]='sizeregisterformgroup'>
+                    <div class="form-group">
+                        <label>Size </label><br>
+                        <input type="text" formControlName='size'  class="form-control" placeholder="Size">
+                        <div *ngIf="sizeregisterformgroup.controls['size'].invalid && (sizeregisterformgroup.controls['size'].dirty || sizeregisterformgroup.controls['size'].touched) || validationstatus ">
+                            <div *ngIf="sizeregisterformgroup.controls['size'].errors['required']" style="color: red;" >Please enter the size
+                            </div>
+                            <div *ngIf="sizeregisterformgroup.controls['size'].errors['pattern']" style="color: red;" >First letter must be capital and only characters allowed
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label>Shoulder </label><br>
+                        <input type="text" formControlName='shoulder'  class="form-control" placeholder="Shoulder">
+                        <div *ngIf="sizeregisterformgroup.controls['shoulder'].invalid && (sizeregisterformgroup.controls['shoulder'].dirty || sizeregisterformgroup.controls['shoulder'].touched) || validationstatus ">
+                            <div *ngIf="sizeregisterformgroup.controls['shoulder'].errors['required']" style="color: red;" >Please enter the shoulder size
+                            </div>
+                            <div *ngIf="sizeregisterformgroup.controls['shoulder'].errors['pattern']" style="color: red;" >Only numbers allowed
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <br>
+                    <div class="form-group">
+                        <label>Chest </label><br>
+                        <input type="text" formControlName='chest'  class="form-control" placeholder="Chest">
+                        <div *ngIf="sizeregisterformgroup.controls['chest'].invalid && (sizeregisterformgroup.controls['chest'].dirty || sizeregisterformgroup.controls['chest'].touched) || validationstatus ">
+                            <div *ngIf="sizeregisterformgroup.controls['chest'].errors['required']" style="color: red;" >Please enter the chest size
+                            </div>
+                            <div *ngIf="sizeregisterformgroup.controls['chest'].errors['pattern']" style="color: red;" >Only numbers allowed
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <br>
+                    <div class="form-group">
+                        <label>Length </label><br>
+                        <input type="text" formControlName='length'  class="form-control" placeholder="Length">
+                        <div *ngIf="sizeregisterformgroup.controls['length'].invalid && (sizeregisterformgroup.controls['length'].dirty || sizeregisterformgroup.controls['length'].touched) || validationstatus ">
+                            <div *ngIf="sizeregisterformgroup.controls['length'].errors['required']" style="color: red;" >Please enter the length
+                            </div>
+                            <div *ngIf="sizeregisterformgroup.controls['length'].errors['pattern']" style="color: red;" >Only numbers allowed
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <br>
+                   <div>
+                    <button type="submit" (click)="OnSubmit()"   class="btn btn-danger" rounded="true">SAVE</button>
+                   </div>
+                    <br>
+                    
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,97 @@
+<div class="container login-container">
+    <div class="row">
+    <div class="col-md-6 login-form-2">
+    <br>
+    <h3 style="text-align: center;">Create Your Profile</h3>
+    <form [formGroup]='customerregisterform'>
+    <div class="form-group">
+        <label>Name</label><br>
+    <input type="text"formControlName='customername' class="form-control" placeholder="Enter your name" />
+    <div *ngIf="customerregisterform.controls['customername'].invalid && (customerregisterform.controls['customername'].dirty || customerregisterform.controls['customername'].touched) || validationstatus ">
+        <div *ngIf="customerregisterform.controls['customername'].errors['required']" style="color: red;" >Please enter your name.
+        </div>
+        <div *ngIf="customerregisterform.controls['customername'].errors['pattern']" style="color: red;" >First letter must be capital and numbers not allowed.
+        </div>
+    </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Email </label><br>
+    <input type="text"formControlName='email' class="form-control" placeholder="Enter your e-mail" />
+    <div *ngIf="customerregisterform.controls['email'].invalid && (customerregisterform.controls['email'].dirty || customerregisterform.controls['email'].touched) || validationstatus ">
+        <div *ngIf="customerregisterform.controls['email'].errors['required']" style="color: red;" >Please enter your e-mail.
+        </div>
+        <div *ngIf="customerregisterform.controls['email'].errors['email']" style="color: red;" >Please check format of e-mail.
+        </div>
+    </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Phone</label><br>
+    <input type="text"formControlName='phone' class="form-control" placeholder="Enter your contact number" />
+    <div *ngIf="customerregisterform.controls['phone'].invalid && (customerregisterform.controls['phone'].dirty || customerregisterform.controls['phone'].touched) || validationstatus ">
+        <div *ngIf="customerregisterform.controls['phone'].errors['required']" style="color: red;" >Please enter your contact number.
+        </div>
+        <div *ngIf="customerregisterform.controls['phone'].errors['pattern']" style="color: red;" >Numbers only allowed and must be 10 digits.
+        </div>
+    </div>
+    </div>
+    <br>
+    <div class="field">
+        <label class="label_field">Photo&nbsp;&nbsp;</label>
+        <input type="file"
+        formControlName="customerphoto" (change)="selectFile($event)"
+        placeholder="Photo" />
+        <!-- <div *ngIf="customerregisterform.controls['customerphoto'].invalid && (customerregisterform.controls['customerphoto'].dirty || customerregisterform.controls['customerphoto'].touched) || validationstatus ">
+            <div *ngIf="customerregisterform.controls['customerphoto'].errors['required']" style="color: red;" >Please enter your photo.
+            </div>
+        </div> -->
+        </div><br>
+    <div class="form-group">
+        <label>Password</label><br>
+    <input type="text"formControlName='password' class="form-control" placeholder="Password" />
+    <div *ngIf="customerregisterform.controls['password'].invalid && (customerregisterform.controls['password'].dirty || customerregisterform.controls['password'].touched) || validationstatus ">
+        <div *ngIf="customerregisterform.controls['password'].errors['required']" style="color: red;" >Please enter your password.
+        </div>
+    </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Select your district</label><br>
+    <select class="form-control"formControlName='districtid' (change)="onChange()">
+    <option value="">--Select--</option>
+    <option *ngFor="let row of districtdetails"[value]="row.districtid">
+        {{row.districtname}}
+    </option>
+    </select>
+    <div *ngIf="customerregisterform.controls['districtid'].invalid && (customerregisterform.controls['districtid'].dirty || customerregisterform.controls['districtid'].touched) || validationstatus ">
+        <div *ngIf="customerregisterform.controls['districtid'].errors['required']" style="color: red;" >Please choose one district.
+        </div>
+    </div>
+    </div><br>
+    <div class="form-group">
+        <label>Select your location</label><br>
+    <select class="form-control"formControlName='locationid'>
+    <option value="">--Select--</option>
+    <option *ngFor="let row of locationdetails"[value]="row.locationid">
+        {{row.locationname}}
+    </option>
+    </select>
+    <div *ngIf="customerregisterform.controls['locationid'].invalid && (customerregisterform.controls['locationid'].dirty || customerregisterform.controls['locationid'].touched) || validationstatus ">
+        <div *ngIf="customerregisterform.controls['locationid'].errors['required']" style="color: red;" >Please choose one location.
+        </div>
+    </div>
+    </div>
+    <br>
+    <div class="form-group">
+    <br>
+    <button type="submit" (click)="OnSubmit()" class="btn btn-danger" rounded="true">
+    Confirm</button>
+    </div>
+    </form>
+    </div></div></div>
+    <br>
+    <link href="/assets/guest/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="/assets/guest/css/tiny-slider.css" rel="stylesheet">
+		<link href="/assets/guest/css/style.css" rel="stylesheet">

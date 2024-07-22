@@ -1,0 +1,16 @@
+<br><br><br><div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 style="text-align:center;">EDIT DISTRICT </h3>
+            <form [formGroup]="editdistrictForm">
+                    <br>
+                    <input type="hidden" formControlName="districtid">
+                    <input type="text" formControlName="districtname" class="form-control">
+                   <br>
+                    <button type="Submit" (click)="onsubmit()" class="btn btn-danger">SUBMIT</button>
+            </form>
+        </div> 
+    </div>
+</div>
+<br><br>
+<router-outlet></router-outlet>

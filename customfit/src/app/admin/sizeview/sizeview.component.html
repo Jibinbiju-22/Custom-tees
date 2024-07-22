@@ -1,0 +1,26 @@
+<br>
+<h3 Align="center">SIZE VIEW</h3><br> <div class="col-md-10">
+    <table class="table table-striped"> <thead>
+    <tr>
+    <th scope="col">SL.NO</th>
+    <th scope="col">Size</th>
+    <th scope="col">Shoulder</th>
+    <th scope="col">Chest</th>
+    <th scope="col">Length</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of sizedetails,let i=index">
+    <td>{{ i+1 }}</td>
+    <td>{{ data.size}}</td>
+    <td>{{ data.shoulder}}</td>
+    <td>{{ data.chest}}</td>
+    <td>{{ data.length}}</td>
+   
+    <!-- <td><a [routerLink]="['/adminmaster/sizeedit',data.sizeid]">
+        <button class="btn btn-primary">Edit</button>
+    </a></td> -->
+    <td><button class="btn btn-success"(click)="Deletesize(data.sizeid)" >Delete</button>
+    </td>
+    </tr></tbody>
+    </table></div>

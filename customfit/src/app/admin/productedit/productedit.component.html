@@ -1,0 +1,81 @@
+
+
+<div class="container login-container">
+    <div class="row">
+        <div class="col-md-6 login-form-2"  style="padding-left:252px ; margin-top:100px;">
+            <h3 style =" text-align: center;">PRODUCT EDIT</h3><br><br>
+            <form [formGroup]='ProductFormGroup'  >
+                    
+                    <div class="form-group">
+                        <label>Product name</label><br>
+                        <input type="text"  formControlName='productname'  class="form-control" >
+                        <!-- <div *ngIf="ProductFormGroup.controls['productname'].invalid && (ProductFormGroup.controls['productname'].dirty || ProductFormGroup.controls['productname'].touched) || validationstatus ">
+                            <div *ngIf="ProductFormGroup.controls['productname'].errors['required']" style="color: red;" >Please enter product name
+                            </div> -->
+                            <!-- <div *ngIf="ProductFormGroup.controls['phone'].errors['pattern']" style="color: red;" >Please Check Format of Number
+                            </div> -->
+                        <!-- </div> -->
+                    </div>
+                    <br>
+                    <!-- <div class="form-group"> -->
+                        <!-- <label>Select product category</label><br> -->
+                        <input type="hidden" class="form-control" formControlName='productid'>
+                            <!-- <option value="">--Select--</option>
+                            <option *ngFor="let row of categorydetail"[value]="row.categoryid">
+                                {{row.categoryname}}
+                            </option> -->
+                       
+                        <!-- <div *ngIf="ProductFormGroup.controls['categoryid'].invalid && (ProductFormGroup.controls['categoryid'].dirty || ProductFormGroup.controls['categoryid'].touched) || validationstatus ">
+                            <div *ngIf="ProductFormGroup.controls['categoryid'].errors['required']" style="color: red;" >Please choose one category
+                            </div> -->
+                            <!-- <div *ngIf="ProductFormGroup.controls['phone'].errors['pattern']" style="color: red;" >Please Check Format of Number
+                            </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                    <br>
+                    <div class="field">
+                        <label class="label_field">Product image</label>
+                        <input type="file"
+                        formControlName="pimage" (change)="selectFile($event)">
+                        <!-- <div *ngIf="ProductFormGroup.controls['pimage'].invalid && (ProductFormGroup.controls['pimage'].dirty || ProductFormGroup.controls['pimage'].touched) || validationstatus ">
+                            <div *ngIf="ProductFormGroup.controls['pimage'].errors['required']" style="color: red;" >Please enter product image
+                            </div> -->
+                            <!-- <div *ngIf="ProductFormGroup.controls['phone'].errors['pattern']" style="color: red;" >Please Check Format of Number
+                            </div> -->
+                        <!-- </div> -->
+                        </div>
+                    <br>
+                    <br>
+                    
+                    <div class="form-group">
+                        <label>Price</label><br>
+                        <input type="text"  formControlName='price'  class="form-control">
+                        <!-- <div *ngIf="ProductFormGroup.controls['price'].invalid && (ProductFormGroup.controls['price'].dirty || ProductFormGroup.controls['price'].touched) || validationstatus ">
+                            <div *ngIf="ProductFormGroup.controls['price'].errors['required']" style="color: red;" >Please enter the price
+                            </div>
+                            <div *ngIf="ProductFormGroup.controls['price'].errors['pattern']" style="color: red;" >Only numbers allowed
+                            </div>
+                        </div> -->
+                    </div>
+                    <br>
+                    
+                    <div class="form-group">
+                        <label>Description</label><br>
+                        <!-- <input type="text"  formControlName='description'  class="form-control" placeholder="Description"> -->
+<textarea formControlName='description'  class="form-control"  rows="10" ></textarea>
+<!-- <div *ngIf="ProductFormGroup.controls['description'].invalid && (ProductFormGroup.controls['description'].dirty || ProductFormGroup.controls['description'].touched) || validationstatus ">
+    <div *ngIf="ProductFormGroup.controls['description'].errors['required']" style="color: red;" >Please enter the description
+    </div> -->
+    <!-- <div *ngIf="ProductFormGroup.controls['price'].errors['pattern']" style="color: red;" >Only Numbers Allowed
+    </div> -->
+<!-- </div> -->
+                    </div>
+                   <div>
+                    <button type="submit" (click)="OnSubmit()"   class="btn btn-danger" rounded="true">Save</button>
+                   </div>
+                    <br>
+                    
+                </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,104 @@
+
+<link href="/assets/guest/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="/assets/guest/css/tiny-slider.css" rel="stylesheet">
+		<link href="/assets/guest/css/style.css" rel="stylesheet">
+        <div class="why-choose-section">
+
+            <div class="container"  *ngFor="let data of finalproductdata">
+        
+                <div class="row justify-content-between">
+
+                    <div class="col-lg-5">
+                        <div class="img-wrap">
+                            <h3>Product</h3><br>
+                            <img src="http://localhost:3000/images/{{data.admindesign}}" style="height: 250px;" alt="Image" class="img-fluid">
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-6">
+                        
+                        <!-- <h2 class="section-title">
+                            {{data.productname}}</h2> -->
+        
+                        <div class="row my-5">
+
+                            <div class="col-6 col-md-6">
+                                <div class="feature">
+                                    <!-- <div class="icon"> -->
+                                       <h3>Name</h3><br>
+                                    <!-- </div> -->
+                                    <h3>{{data.productname}}</h3>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-6">
+                                <div class="feature">
+                                    <!-- <div class="icon"> -->
+                                        <h3>Description</h3><br>
+                                    <!-- </div> -->
+                                    <p>{{data.admindescription}}</p>
+                                </div>
+                            </div>
+
+                           
+        <div>
+            <br>
+            <br>
+        </div>
+
+        <div class="col-6 col-md-6">
+            <div class="feature">
+                <!-- <div class="icon"> -->
+                   <h3>Total quantity</h3><br>
+                <!-- </div> -->
+                <h3>{{data.totalquantity}}</h3>
+            </div>
+        </div>
+
+                            
+
+                            <div class="col-6 col-md-6">
+                                <div class="feature">
+                                    <!-- <div class="icon"> -->
+                                       <h3>Customization charge</h3><br>
+                                    <!-- </div> -->
+                                    <h3>Rs. {{data.customizationprice}}</h3>
+                                </div>
+                            </div>
+        <div><br><br></div>
+                            <div class="col-6 col-md-6">
+                                <div class="feature">
+                                    <!-- <div class="icon"> -->
+                                       <h3>Total price</h3><br>
+                                    <!-- </div> -->
+                                    <h3>Rs. {{data.money}}</h3>
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                    </div>
+        
+                   
+        
+                   
+        
+            </div>
+            <br>
+            <br>
+            
+            <div >
+                <a  class="product-item" [routerLink]="['/payment',data.finalproductid]">
+                    <!-- <img src="http://localhost:3000/images/{{data.pimage}}"   class="img-fluid product-thumbnail" style="height: 150px;" alt="Colorlib Template"> -->
+                    <button class="btn btn-danger" (click)="OnSubmit()" rounded="true"> Buy now</button>
+                </a>
+    
+        </div>
+        <br>
+        <br><br><br><br><br>
+        <br><br><br><br><br><br>
+
+        </div>
+       
+        </div>

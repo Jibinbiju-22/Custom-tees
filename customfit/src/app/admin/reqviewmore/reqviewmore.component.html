@@ -1,0 +1,186 @@
+<br>
+<h3 Align="center">REQUEST VIEW</h3><br> <div class="col-md-10">
+    <br><br>
+
+    <div class="why-choose-section">
+
+        <div class="container"  *ngFor="let data of viewsizereq">
+    
+            <div class="row justify-content-between">
+
+                <div class="col-lg-5">
+                    <div class="img-wrap">
+                        <h3>Design</h3><br>
+                        <img src="http://localhost:3000/images/{{data.customerdesign}}" style="height: 250px;" alt="Image" class="img-fluid">
+                    </div>
+                </div>
+    
+                <div class="col-lg-6">
+                    
+                    <!-- <h2 class="section-title">
+                        {{data.productname}}</h2> -->
+    
+                    <div class="row my-5">
+
+                         
+                        <div class="col-6 col-md-6">
+                            <div class="feature">
+                                <!-- <div class="icon"> -->
+                                    <h3>Customer name</h3><br>
+                                <!-- </div> -->
+                                <p>{{data.customername}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-6">
+                            <div class="feature">
+                                <!-- <div class="icon"> -->
+                                    <h3>E-mail</h3><br>
+                                <!-- </div> -->
+                                <p>{{data.email}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-5">
+                        <div class="col-6 col-md-6">
+                            <div class="feature">
+                                <!-- <div class="icon"> -->
+                                    <h3>Category</h3><br>
+                                <!-- </div> -->
+                                <p>{{data.categoryname}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-6">
+                            <div class="feature">
+                                <!-- <div class="icon"> -->
+                                   <h3>Product name</h3><br>
+                                <!-- </div> -->
+                                <p>{{data.productname}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-5">
+                        <div class="col-lg-5">
+                            <div class="img-wrap">
+                                <h3>Product</h3><br>
+                                <img src="http://localhost:3000/images/{{data.pimage}}" style="height: 250px;" alt="Image" class="img-fluid">
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-6">
+                            <div class="feature">
+                                <!-- <div class="icon"> -->
+                                   <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price</h3><br>
+                                <!-- </div> -->
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rs. {{data.price}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row my-5">
+
+                        <div class="col-6 col-md-6">
+                            <div class="feature">
+                                <!-- <div class="icon"> -->
+                                   <h3>Description</h3><br>
+                                <!-- </div> -->
+                                <p>{{data.customerdesigndescription}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-6">
+                            <div class="feature">
+                                <!-- <div class="icon"> -->
+                                   <h3>Delivery address</h3><br>
+                                <!-- </div> -->
+                                <p>{{data.deliveryaddress}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                        
+                    <div class="row my-5">
+                        <div class="col-6 col-md-6">
+                            <div class="feature">
+                                <!-- <div class="icon"> -->
+                                   <h3>Required date</h3><br>
+                                <!-- </div> -->
+                                <p>{{data.requireddate}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                       
+
+                        
+                       
+    
+                       
+
+                       
+
+                        
+                      
+    
+                   
+    
+                </div>
+    
+               
+    
+               
+    
+        </div>
+        <br>
+        <br>
+        
+
+       
+
+    </div>
+    </div>
+    <br>
+
+
+    <table class="table table-striped"> <thead>
+    <tr>
+    <th scope="col">SL.NO</th>
+   
+    
+    <th scope="col">Size</th>
+    <th scope="col">Quantity</th>
+   
+   
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of reqviewmore,let i=index">
+    <td>{{ i+1 }}</td>
+    <td>{{ data.size}}</td>
+    <td>{{ data.quantity}}</td>
+   
+    <!-- <td>
+        <button type="submit" class="btn btn-primary" [routerLink]="['/Adminmaster/Editdistrict',data.districtid]">Edit</button>
+    </td> -->
+    <!-- <td><a [routerLink]="['/adminmaster/reqconfirm',data.requestid]">
+        <button class="btn btn-primary">Approve</button>
+    </a></td> -->
+    <!-- <td><button class="btn btn-success"(click)="Deletedistrict(data.districtid)" >Delete</button>
+    </td> -->
+    </tr></tbody>
+    </table>
+  <div *ngFor="let data of viewsizereq">
+    <a  class="product-item" [routerLink]="['/adminmaster/reqconfirm',data.requestid]">
+        <!-- <img src="http://localhost:3000/images/{{data.pimage}}"   class="img-fluid product-thumbnail" style="height: 150px;" alt="Colorlib Template"> -->
+        <button class="btn btn-danger" rounded="true">Approve</button>
+        
+    </a>
+
+</div>
+
+</div>
+<br>
+
+

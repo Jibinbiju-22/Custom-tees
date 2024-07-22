@@ -1,0 +1,21 @@
+<br>
+<h3 Align="center">COLOR VIEW</h3><br> <div class="col-md-10">
+    <table class="table table-striped"> <thead>
+    <tr>
+    <th scope="col">SL.NO</th>
+    <th scope="col">Color</th>
+    
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of colordetails,let i=index">
+    <td>{{ i+1 }}</td>
+    <td>{{ data.color}}</td>
+   
+    <!-- <td><a [routerLink]="['/adminmaster/coloredit',data.colorid]">
+        <button class="btn btn-primary">Edit</button>
+    </a></td> -->
+    <td><button class="btn btn-success"(click)="Deletecolor(data.colorid)" >Delete</button>
+    </td>
+    </tr></tbody>
+    </table></div>

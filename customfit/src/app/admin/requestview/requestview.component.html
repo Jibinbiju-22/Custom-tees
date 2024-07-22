@@ -1,0 +1,47 @@
+<br>
+<h3 Align="center">REQUESTS</h3><br> <div class="col-md-10">
+    <table class="table table-striped"> <thead>
+    <tr>
+    <th scope="col">SL.NO</th>
+    <th scope="col">Customer name</th>
+    <th scope="col">Email</th>
+    <th scope="col">Category</th>
+    <th scope="col">Product</th>
+    <th scope="col"></th>
+    <th scope="col">Design</th>
+    <th scope="col">Request date</th>
+    <th scope="col">Required date</th>
+    <th scope="col">Status</th>
+   
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of viewsizereq,let i=index">
+    <td>{{ i+1 }}</td>
+    <td>{{ data.customername}}</td>
+    <td>{{ data.email}}</td>
+    <td>{{ data.categoryname}}</td>
+    <td>{{ data.productname}}</td>
+    <td class="text-danger">
+        <img style="width: 50px;height: 50px;" src="http://localhost:3000/images/{{data.pimage}}">
+    </td>
+    
+    
+   
+    <td class="text-danger">
+        <img style="width: 50px;height: 50px;" src="http://localhost:3000/images/{{data.customerdesign}}">
+    </td>
+    <td>{{ data.requestdate}}</td>
+    <td>{{ data.requireddate}}</td>
+    <td>{{ data.requeststatus}}</td>
+    <!-- <td>
+        <button type="submit" class="btn btn-primary" [routerLink]="['/Adminmaster/Editdistrict',data.districtid]">Edit</button>
+    </td> -->
+    <td><a [routerLink]="['/adminmaster/reqviewmore',data.requestid]">
+        <button class="btn btn-primary">View</button>
+    </a></td>
+    <!-- <td><button class="btn btn-success"(click)="Deletedistrict(data.districtid)" >Delete</button>
+    </td> -->
+    </tr></tbody>
+    </table></div>
+

@@ -1,0 +1,131 @@
+<link href="/assets/guest/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="/assets/guest/css/tiny-slider.css" rel="stylesheet">
+		<link href="/assets/guest/css/style.css" rel="stylesheet">
+<div class="why-choose-section">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-6">
+                <!-- <h2 class="section-title">Why Choose Us</h2>
+                <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p> -->
+
+                <div class="row my-5">
+                    <form [formGroup]='booknowsizeformgroup'>
+                    <div class="col-6 col-md-6">
+                        <div class="feature">
+                            <label>Select the size</label><br>
+                            <select class="form-control" formControlName='sizeid'>
+                            <option value="">--Select--</option>
+                            <option *ngFor="let row of sizedetails"[value]="row.sizeid">
+                                {{row.size}}
+                            </option>
+                            </select>
+                            <div *ngIf="booknowsizeformgroup.controls['sizeid'].invalid && (booknowsizeformgroup.controls['sizeid'].dirty || booknowsizeformgroup.controls['sizeid'].touched) || validationstatus ">
+                                <div *ngIf="booknowsizeformgroup.controls['sizeid'].errors['required']" style="color: red;" >Please choose one size.
+                                </div>
+                                <!-- <div *ngIf="booknowsizeformgroup.controls['phone'].errors['pattern']" style="color: red;" >Please Check Format of Number
+                                </div> -->
+                            </div>
+                            <!-- <div class="icon"> -->
+                                <!-- <img src="/assets/guest/images/truck.svg" alt="Image" class="imf-fluid"> -->
+                            <!-- </div> -->
+                           
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6">
+                        <div class="feature">
+                            <label>Quantity </label><br>
+									<input type="text" formControlName='quantity' class="form-control"
+										placeholder="Quantity">
+                                        <div *ngIf="booknowsizeformgroup.controls['quantity'].invalid && (booknowsizeformgroup.controls['quantity'].dirty || booknowsizeformgroup.controls['quantity'].touched) || validationstatus ">
+                                            <div *ngIf="booknowsizeformgroup.controls['quantity'].errors['required']" style="color: red;" >Please enter quantity.
+                                            </div>
+                                            <div *ngIf="booknowsizeformgroup.controls['quantity'].errors['pattern']" style="color: red;" >Only numbers allowed.
+                                            </div>
+                                        </div>
+
+                            <!-- <div class="icon"> -->
+                                <!-- <img src="/assets/guest/images/bag.svg" alt="Image" class="imf-fluid"> -->
+                            <!-- </div> -->
+                            <!-- <h3>Easy to Shop</h3>
+                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p> -->
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6">
+                        <div class="feature">
+                            <div class="form-group" >
+                                <a class="product-item" [routerLink]="['/customermaster/quantity']">
+
+                                    <button type="submit" (click)="OnSubmit()" class="btn btn-danger"
+                                        rounded="true">
+                                        Confirm</button>
+                                </a>
+                                
+                            </div>
+
+                            
+
+                            <!-- <div class="icon">
+                                    <img src="/assets/guest/images/return.svg" alt="Image" class="imf-fluid">
+                                </div> -->
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6">
+                        <div class="feature">
+                            <div class="form-group" >
+                                <a class="product-item" [routerLink]="['/customermaster/customerhome']">
+
+                                    <button type="submit" class="btn btn-danger"
+                                        rounded="true">
+                                        Done</button>
+                                </a>
+                                
+                            </div>
+
+                            
+
+                            <!-- <div class="icon">
+                                    <img src="/assets/guest/images/return.svg" alt="Image" class="imf-fluid">
+                                </div> -->
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-6 col-md-6">
+                        <div class="feature">
+                            <div class="icon">
+                                <img src="/assets/guest/images/support.svg" alt="Image" class="imf-fluid">
+                            </div>
+                            <h3>24/7 Support</h3>
+                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="col-6 col-md-6">
+                        <div class="feature">
+                            <div class="icon">
+                                <img src="/assets/guest/images/return.svg" alt="Image" class="imf-fluid">
+                            </div>
+                            <h3>Hassle Free Returns</h3>
+                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                        </div>
+                    </div> -->
+                   
+</form>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-5">
+                <div class="img-wrap">
+                    <img src="/assets/guest/images/why-choose-us-img.jpg" alt="Image" class="img-fluid">
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+</div>

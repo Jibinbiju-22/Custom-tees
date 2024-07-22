@@ -1,0 +1,47 @@
+<br>
+<h3 Align="center">PAYMENTS</h3><br> <div class="col-md-10">
+    <table class="table table-striped"> <thead>
+    <tr>
+    <th scope="col">Customized product</th>
+    <th scope="col">Product name</th>
+    <!-- <th scope="col">Product</th> -->
+   
+    <!-- <th scope="col">Category</th> -->
+    <th scope="col">Quantity</th>
+    <th scope="col">Total price</th>
+    <th scope="col">Status</th>
+    <th scope="col">Payment date</th>
+    <th scope="col">Customer name</th>
+    <th scope="col">E-mail</th>
+    <!-- <th scope="col">Phone</th> -->
+    <th scope="col">Delivery address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of viewpayment,let i=index">
+        <td class="text-danger">
+            <img style="width: 50px;height: 50px;" src="http://localhost:3000/images/{{data.admindesign}}">
+        </td>
+    <td>{{ data.productname}}</td>
+    <!-- <td class="text-danger">
+        <img style="width: 50px;height: 50px;" src="http://localhost:3000/images/{{data.pimage}}">
+    </td> -->
+    <!-- <td>{{ data.categoryname}}</td> -->
+    <td>{{ data.totalquantity}}</td>
+    <td>{{ data.money}}</td>
+    <td>{{ data.paymentstatus}}</td>
+    <td>{{ data.paymentdate}}</td>
+    <td>{{ data.customername}}</td>
+    <td>{{ data.email}}</td>
+    <!-- <td>{{ data.phone}}</td> -->
+    <td>{{ data.deliveryaddress}}</td>
+   <!-- <td><button type="submit" (click)="OnSubmit(data.finalproductid)" class="btn btn-danger"
+    rounded="true">
+    Delete</button></td> -->
+    <!-- <td><a [routerLink]="['/adminmaster/sizeedit',data.sizeid]">
+        <button class="btn btn-primary">Edit</button>
+    </a></td> -->
+    <!-- <td><button class="btn btn-success"(click)="Deletesize(data.sizeid)" >Delete</button>
+    </td> -->
+    </tr></tbody>
+    </table></div>
